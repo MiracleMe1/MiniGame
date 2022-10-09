@@ -9,8 +9,9 @@ public class Arrow : MonoBehaviour
     private Rigidbody2D rb;
     private float angle = 0f;
     private bool isHit = false;
-    private float lifeTime = 1f;
-
+    private float lifeTime = 3f;
+    private bool stateOfArrow = false;//false为普通木箭，true为火箭
+    
     public GameObject Self;
     void Start()
     {
@@ -36,10 +37,18 @@ public class Arrow : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-         Debug.Log("isHit");
-         isHit = true;
-         rb.velocity = new Vector2(0, 0);
-         rb.isKinematic = true;
+        if(!collision.collider.CompareTag("Rope"))
+        {
+            isHit = true;
+            rb.velocity = new Vector2(0, 0);
+            rb.gravityScale = 0;
+        }
+         
+    }
+
+    public void SetStateOfArrow(bool state)
+    {
+        stateOfArrow = state;
     }
     
 }

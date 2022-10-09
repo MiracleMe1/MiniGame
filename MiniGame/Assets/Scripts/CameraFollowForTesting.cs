@@ -5,16 +5,12 @@ using UnityEngine;
 
 public class CameraFollowForTesting: MonoBehaviour
 {
-
-    public GameObject character;
+    
 
     private void Start()
     {
-        character = GameObject.Find("Character");
+        Application.targetFrameRate = 60;
     }
+    
 
-    private void Update()
-    {
-        gameObject.transform.position = character.transform.position + new Vector3(1, 0, -10);
-    }
 }

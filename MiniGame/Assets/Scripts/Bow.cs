@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -13,14 +15,16 @@ public class Bow : MonoBehaviour
     private GameObject[] points;
     public int numberOfPoints;
     public float spaceBetweenPoints;
-    
+    public bool onFire = false;
     
     private float zRotation=0f;
     private float isDrag = 0f;
     private Vector2 dragDirection = new Vector2(0, 0);
+    
+
     void Start()
     {
-        joystick=GameObject.Find("JoystickBackground").GetComponent<Joystick>();
+        joystick=GameObject.Find("ImageEdgeStick").GetComponent<Joystick>();
         points = new GameObject[numberOfPoints];
         for (int i = 0; i < numberOfPoints; i++)
         {
@@ -53,14 +57,22 @@ public class Bow : MonoBehaviour
     {
         dragDirection = -joystick.dragDirection;
         zRotation = Mathf.Atan2(joystick.dragDirection.y,joystick.dragDirection.x)*Mathf.Rad2Deg;
-        launchForce = joystick.dragStrength.magnitude/4.5f;
+        launchForce = joystick.dragStrength.magnitude/6f;
     }
     //射击
     public void Shoot()
     {
         GameObject newArrow = Instantiate(arrow, shotPosition.position, shotPosition.rotation);
         newArrow.GetComponent<Rigidbody2D>().velocity = dragDirection * launchForce;
-        Debug.Log(launchForce);
+        if (onFire)
+        {
+            newArrow.GetComponent<Arrow>().SetStateOfArrow(onFire);
+        }
+        else if (!onFire)
+        {
+            newArrow.GetComponent<Arrow>().SetStateOfArrow(onFire);
+        }
+            Debug.Log(launchForce);
     }
 
     Vector2 PointPosition(float t)

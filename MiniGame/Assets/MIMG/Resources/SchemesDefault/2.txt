@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSaveButton xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SaveButton>
+    <buttonsGame>Stick</buttonsGame>
+    <m_Size>1</m_Size>
+    <m_Transparency>0.24</m_Transparency>
+    <m_Position>
+      <x>-308</x>
+      <y>-95</y>
+    </m_Position>
+  </SaveButton>
+  <SaveButton>
+    <buttonsGame>Attack</buttonsGame>
+    <m_Size>0.45</m_Size>
+    <m_Transparency>0.8</m_Transparency>
+    <m_Position>
+      <x>271</x>
+      <y>-218</y>
+    </m_Position>
+  </SaveButton>
+  <SaveButton>
+    <buttonsGame>Settings</buttonsGame>
+    <m_Size>0.3</m_Size>
+    <m_Transparency>1</m_Transparency>
+    <m_Position>
+      <x>-434</x>
+      <y>232</y>
+    </m_Position>
+  </SaveButton>
+  <SaveButton>
+    <buttonsGame>Jump</buttonsGame>
+    <m_Size>0.45</m_Size>
+    <m_Transparency>0.801</m_Transparency>
+    <m_Position>
+      <x>174</x>
+      <y>-219</y>
+    </m_Position>
+  </SaveButton>
+</ArrayOfSaveButton>

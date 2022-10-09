@@ -1,0 +1,162 @@
+{
+"skeleton": {
+	"hash": "vs11MmGz56la2lJbDEJxJKX09XM",
+	"spine": "3.8.75",
+	"x": -64.25,
+	"y": -0.01,
+	"width": 128,
+	"height": 146,
+	"images": "D:/Minigame/zhujue1-1/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root", "x": -0.2, "y": 73.78 },
+	{ "name": "body", "parent": "root", "length": 8.97, "rotation": 91.49, "x": -0.02, "y": -50.69 },
+	{ "name": "head", "parent": "body", "length": 38.38, "rotation": -1.38, "x": 11.62, "y": -0.23 },
+	{ "name": "clothes", "parent": "body", "length": 10.38, "rotation": -0.63, "x": -12.63, "y": 0.25 },
+	{ "name": "l-leg", "parent": "clothes", "length": 7.49, "rotation": -179.07, "x": -2.09, "y": -26.12 },
+	{ "name": "r-leg", "parent": "clothes", "length": 7.25, "rotation": 178.52, "x": -1.89, "y": 30.06 }
+],
+"slots": [
+	{ "name": "body0", "bone": "body", "attachment": "body0" },
+	{ "name": "head0", "bone": "head", "attachment": "head0" },
+	{ "name": "left-leg", "bone": "l-leg", "attachment": "left-leg" },
+	{ "name": "right-leg", "bone": "r-leg", "attachment": "right-leg" },
+	{ "name": "clothes", "bone": "clothes", "attachment": "clothes" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"left-leg": {
+				"left-leg": { "x": -65.01, "y": -24.24, "rotation": 88.21, "width": 128, "height": 146 }
+			},
+			"body0": {
+				"body0": { "x": 49.88, "y": -1.27, "rotation": -91.49, "width": 128, "height": 146 }
+			},
+			"head0": {
+				"head0": { "x": 38.27, "y": -0.13, "rotation": -90.12, "width": 128, "height": 146 }
+			},
+			"right-leg": {
+				"right-leg": { "x": -65.19, "y": 29.22, "rotation": 90.62, "width": 128, "height": 146 }
+			},
+			"clothes": {
+				"clothes": { "x": 62.52, "y": -0.83, "rotation": -90.86, "width": 128, "height": 146 }
+			}
+		}
+	}
+],
+"animations": {
+	"idle": {
+		"bones": {
+			"body": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.8, "x": -0.03, "y": 1.29, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.6 }
+				]
+			},
+			"head": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.8, "x": 0.39, "y": -0.01, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.6 }
+				]
+			},
+			"clothes": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.8, "x": -0.24, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.6 }
+				]
+			},
+			"l-leg": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.8, "x": -1.06, "y": -0.02, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.6 }
+				]
+			},
+			"r-leg": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.8, "x": -1.11, "y": 0.03, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.6 }
+				]
+			}
+		}
+	},
+	"run": {
+		"bones": {
+			"r-leg": {
+				"rotate": [
+					{ "angle": -38.37 },
+					{ "time": 0.0667, "curve": "stepped" },
+					{ "time": 0.2667 },
+					{ "time": 0.3333, "angle": -27.2 }
+				],
+				"translate": [
+					{ "x": 2.13, "y": 4.43 },
+					{ "time": 0.0667 },
+					{ "time": 0.1667, "x": -0.71, "y": -27.69 },
+					{ "time": 0.2667 },
+					{ "time": 0.3333, "x": 1.88, "y": 4.14 }
+				]
+			},
+			"l-leg": {
+				"rotate": [
+					{ "angle": 30.47 },
+					{ "time": 0.0667, "curve": "stepped" },
+					{ "time": 0.2667 },
+					{ "time": 0.3333, "angle": 41.76 }
+				],
+				"translate": [
+					{ "x": 2.06, "y": -3.38 },
+					{ "time": 0.0667 },
+					{ "time": 0.1667, "x": -0.39, "y": 24.03 },
+					{ "time": 0.2667 },
+					{ "time": 0.3333, "x": 2.2, "y": -4.22 }
+				]
+			},
+			"body": {
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": -0.06, "y": 2.49 },
+					{ "time": 0.3333 }
+				]
+			}
+		}
+	},
+	"walk": {
+		"bones": {
+			"r-leg": {
+				"translate": [
+					{},
+					{ "time": 0.2, "x": -1.6, "y": -29.97 },
+					{ "time": 0.4, "x": -0.72, "y": -50.69 },
+					{ "time": 0.6, "y": -30.02 },
+					{ "time": 0.8 }
+				]
+			},
+			"l-leg": {
+				"translate": [
+					{},
+					{ "time": 0.2, "x": -0.79, "y": 26.24 },
+					{ "time": 0.4, "x": 0.69, "y": 47.77 },
+					{ "time": 0.6, "y": 26.26 },
+					{ "time": 0.8 }
+				]
+			},
+			"body": {
+				"translate": [
+					{},
+					{ "time": 0.2, "y": 3.32 },
+					{ "time": 0.4 },
+					{ "time": 0.6, "y": 3.32 },
+					{ "time": 0.8 }
+				]
+			}
+		}
+	}
+}
+}

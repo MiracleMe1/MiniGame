@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Arrow
   - Box
+  - Rope
+  - Water
+  - LevelArea
   layers:
   - Default
   - TransparentFX
@@ -17,9 +20,9 @@ TagManager:
   - Arrow
   - Character
   - CTrigger
-  - 
-  - 
-  - 
+  - LiquidParticles
+  - Grass
+  - Stone
   - 
   - 
   - 

@@ -7,7 +7,7 @@ public class SpawnPoint : MonoBehaviour
 {
     public GameObject character;
     public GameObject characterPerfab;
-    private BoxCollider2D collider;
+    private BoxCollider2D collider2d;
     public int numOfCheckPoint;
     
     private GameObject self;
@@ -15,7 +15,7 @@ public class SpawnPoint : MonoBehaviour
     private void Awake()
     {
         self = gameObject;
-        collider = GetComponent<BoxCollider2D>();
+        collider2d = GetComponent<BoxCollider2D>();
         SpawnPlayer(numOfCheckPoint);
 
     }//生成角色
@@ -35,7 +35,7 @@ public class SpawnPoint : MonoBehaviour
     {
         if (numOfCheckPoint == 0)
         { 
-            collider.enabled = false;
+            collider2d.enabled = false;
             characterPerfab=Instantiate(character, self.transform.position,self.transform.rotation);
             self.GetComponent<SpriteRenderer>().enabled = false;
             SaveSystem.LoadByPlayerPrefs("PlayerData");
@@ -43,7 +43,7 @@ public class SpawnPoint : MonoBehaviour
         }
         else
         {
-            collider.enabled = true;
+            collider2d.enabled = true;
             self.GetComponent<SpriteRenderer>().enabled = false;
         }
     }

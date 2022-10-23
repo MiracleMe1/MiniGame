@@ -9,10 +9,11 @@ public class Arrow : MonoBehaviour
     private Rigidbody2D rb;
     private float angle = 0f;
     private bool isHit = false;
-    private float lifeTime = 3f;
+    private float lifeTime = 10f;
     private bool stateOfArrow = false;//false为普通木箭，true为火箭
     
     public GameObject Self;
+    public bool isOnFire = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -49,6 +50,7 @@ public class Arrow : MonoBehaviour
     public void SetStateOfArrow(bool state)
     {
         stateOfArrow = state;
+        isOnFire = state;
     }
     
 }
